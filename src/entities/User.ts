@@ -1,3 +1,4 @@
+import { Exclude } from "class-transformer";
 import {Entity, 
         PrimaryColumn, 
         Column, 
@@ -17,6 +18,7 @@ class User {
     @Column()
     admin: boolean;
     @Column()
+    @Exclude()
     password: string;
     @CreateDateColumn()
     created_at: Date;
